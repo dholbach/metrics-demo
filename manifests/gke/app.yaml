@@ -1,6 +1,10 @@
 apiVersion: apps/v1beta1 # for versions before 1.6.0 use extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    flux.weave.works/locked: "true"
+    flux.weave.works/locked_msg: '"Locking to known good version"'
+    flux.weave.works/locked_user: brice <brice@weave.works>
   name: mighty-fine-fe
 spec:
   replicas: 1
